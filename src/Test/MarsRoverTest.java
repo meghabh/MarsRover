@@ -6,16 +6,11 @@ import static junit.framework.TestCase.assertEquals;
 public class MarsRoverTest {
     @Test
     public void shouldTurnWestFromNorthForInputL(){
-        MarsRover marsRover= new MarsRover();
-        assertEquals("North",marsRover.turnToLeft("East"));
-
+        MarsRover marsRover= new MarsRover(Directions.SOUTH);
+        marsRover.setDirections(Directions.Rotation.L);
+        assertEquals(Directions.EAST,marsRover.getDirection());
     }
 
-    @Test
-    public void shouldTurnNorthFromWestForInputM(){
-        MarsRover marsRover= new MarsRover();
-        assertEquals("North",marsRover.turnToRight("West"));
 
-    }
 
 }
