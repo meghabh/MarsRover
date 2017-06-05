@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import static javafx.scene.input.KeyCode.D;
 import static javafx.scene.input.KeyCode.M;
 import static junit.framework.TestCase.assertEquals;
 
@@ -35,6 +36,13 @@ public class MarsRoverTest {
         MarsRover marsRover= new MarsRover(1, 2, Directions.NORTH);
         marsRover.setDirections(null,"M");
         assertEquals(3,marsRover.getYAxis());
+    }
+    @Test
+    public void shouldTurnLeftAndMoveForward(){
+        MarsRover marsRover= new MarsRover(1, 2, Directions.NORTH);
+        marsRover.setDirections(Directions.Rotation.L,"M");
+        assertEquals(0,marsRover.getXAxis());
+
     }
 
 
