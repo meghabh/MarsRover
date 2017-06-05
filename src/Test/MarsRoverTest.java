@@ -24,6 +24,19 @@ public class MarsRoverTest {
         marsRover.setDirections(null,"M");
         assertEquals(Directions.WEST,marsRover.getDirection());
     }
+    @Test
+    public void shouldBeInThePositionForAxisCoordination(){
+        MarsRover marsRover= new MarsRover(0, 0, Directions.WEST);
+        marsRover.setDirections(null,"M");
+        assertEquals(Directions.WEST,marsRover.getDirection());
+    }
+    @Test
+    public void shouldBeMovedForwardForMInTheGivenDirection(){
+        MarsRover marsRover= new MarsRover(1, 2, Directions.NORTH);
+        marsRover.setDirections(null,"M");
+        assertEquals(3,marsRover.getYAxis());
+    }
+
 
 
 
