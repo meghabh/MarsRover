@@ -41,6 +41,7 @@ public class MarsRoverTest {
     public void shouldTurnLeftAndMoveForward(){
         MarsRover marsRover= new MarsRover(1, 2, Directions.NORTH);
         marsRover.setDirections(Directions.Rotation.L,"M");
+        assertEquals(Directions.WEST,marsRover.getDirection());
         assertEquals(0,marsRover.getXAxis());
 
     }
