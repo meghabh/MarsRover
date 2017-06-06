@@ -3,6 +3,7 @@ import org.junit.Test;
 import static javafx.scene.input.KeyCode.D;
 import static javafx.scene.input.KeyCode.M;
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 
 public class MarsRoverTest {
@@ -45,7 +46,17 @@ public class MarsRoverTest {
         assertEquals(0,marsRover.getXAxis());
 
     }
+    @Test
+    public void ShouldTuenAndMoveforwardForLMLM(){
+        MarsRover marsRover= new MarsRover(1, 2, Directions.NORTH);
+        MarsRover marsRover1=new MarsRover(0,1,Directions.SOUTH);
+        marsRover.setDirections(Directions.Rotation.L,"M");
+        marsRover.setDirections(Directions.Rotation.L,"M");
 
+        assertTrue(marsRover.equals(marsRover1));
+
+
+    }
 
 
 
